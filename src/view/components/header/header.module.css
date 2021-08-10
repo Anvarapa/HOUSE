@@ -1,0 +1,32 @@
+.header {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px 0 15px;
+  background-color: rgb(253, 251, 247);
+}
+.ul {
+  display: flex;
+  list-style: none;
+  grid-gap: 50px;
+}
+.ul a {
+  text-decoration: none;
+  color: black;
+}
+.button_log {
+  display: flex;
+  align-items: center;
+  grid-gap: 20px;
+}
+.button {
+    width: 120px;
+    height: 30px;
+    background: #e02828;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: #fff;
+  }

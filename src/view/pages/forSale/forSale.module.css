@@ -1,0 +1,136 @@
+.all_blocks_h1 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  margin: 60px 0px 20px 0px;
+}
+/* BLOCK 1 */
+.block1 {
+  background-image: url("../../assets/img/Avangard.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 1200px;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 50px;
+  font-size: 28px;
+  line-height: 56px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  /* background-image: url("../../assets/img/lopa.svg");
+  background-repeat: no-repeat; */
+}
+.search {
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
+.search > img {
+  position: absolute;
+  z-index: 1;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-30%);
+}
+
+/*BLOCK 2 */
+.block2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  grid-gap: 20px;
+  margin-bottom: 66px;
+}
+
+/* BLOCK 3 */
+.block3 {
+  display: flex;
+  margin: auto;
+  width: 100%;
+}
+.left {
+  width: 724px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 20px;
+}
+.left_h1 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+.left_p {
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.left_button {
+  width: 146px;
+  height: 36px;
+  background: #e02828;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+/* BLOCK4 */
+.block4 {
+  display: flex;
+  margin: auto;
+  width: 100%;
+}
+.border_button {
+  border: 1px solid #e02828;
+  border-radius: 5px;
+  width: 100px;
+  height: 24px;
+  background-color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #e02828;
+}
+
+/* BLOCK 5 */
+.block5 {
+  display: flex;
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+.block5_l_r {
+  display: flex;
+}
+.b5_left {
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 20px;
+}
+.block5_img {
+  max-width: 250px;
+  width: 100%;
+}
+.block5_img > img {
+  width: 100%;
+}
