@@ -19,11 +19,16 @@
   justify-content: center;
   align-items: center;
   grid-gap: 50px;
-  font-size: 28px;
-  line-height: 56px;
-  text-align: center;
+
   margin: 0 auto;
   margin-bottom: 20px;
+}
+.block1_h1 {
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+  display: block;
+  max-width: 400px;
 }
 .input {
   width: 100%;
@@ -64,7 +69,8 @@
   width: 100%;
 }
 .left {
-  width: 724px;
+  max-width: 724px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -96,7 +102,7 @@
 .block4 {
   display: flex;
   margin: auto;
-  width: 100%;
+ 
 }
 .border_button {
   border: 1px solid #e02828;
@@ -113,7 +119,7 @@
 /* BLOCK 5 */
 .block5 {
   display: flex;
-  grid-gap: 20px;
+  justify-content: space-between;
   margin-top: 20px;
 }
 .block5_l_r {
@@ -133,4 +139,37 @@
 }
 .block5_img > img {
   width: 100%;
+}
+/* ------------------------------------------------------------------ */
+/* АДАПТИВКА */
+/* BLOCK 1 */
+@media (max-width: 300px) {
+  .block1_h1 {
+    font-size: 30px;
+  }
+}
+/* BLOCK 2 */
+@media (max-width: 600px) {
+  .block2{
+    flex-direction: column;
+    align-items: center;
+  }
+  .all_blocks_h1{
+    text-align: center;
+  }
+  /* BLOCK 3 */
+  .block3{
+    flex-direction: column;
+  }
+  .left{
+    grid-gap: 20px;
+  } 
+  /* BLOCK 4 */
+  .block4{
+    flex-direction: column;
+  }
+  /* BLOCK 5 */
+  .block5{
+    flex-direction: column;
+  }
 }
