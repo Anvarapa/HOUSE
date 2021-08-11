@@ -1,9 +1,146 @@
+.grey {
+    position: relative;
+    padding: 85px;
+}
+.x {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 40px;
+    right: 25px;
+}
 .signup{
+    padding: 0 60px;
+    max-width: 1200px;
+    width: 100%;
+    background: #fff;
+    margin: 0 auto;
     display: flex;
 }
 .signup_left{
+    margin-top: 100px;
+}
 
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo > h3{
+    display: flex;
+    margin: 60px 0 20px 0;
+    align-items: center;
+    font-weight: bold;
+}
+.logo > p{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    margin-bottom: 35px;
+    width: 95%;
+    color: rgba(0, 0, 0, 0.5);
+}
+.box{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    grid-gap: 65px 160px;
+    justify-content: space-around;
+}
+.boxIn {
+    width: 110px;
+}
+.boxIn > img{
+    width: 60px;
+    height: 60px;
+}
+.center{
+    width: 1px;
+    height: 778px;
+    background:  rgba(0, 0, 0, 0.1);
+    margin: 0 50px;
 }
 .signup_right{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}   
+.top{
+    display: flex;
+    align-items: center;
+}
+
+.top > p{
+    margin: 0 18px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: Roboto;
+    border-bottom: 2px solid #C4C4C4;
+    transition: all .3s;
     
+}
+
+.top_left:hover {
+    color: #000;
+    border-bottom: 2px solid  #68ACFD;
+}
+.top_right:hover{
+    color: #000;
+    border-bottom: 2px solid  #68ACFD;
+}
+.google{
+    margin: 30px 0 100px 0;
+}
+.google > button{
+    width: 380px;
+    height: 40px;
+    background: #434FAA;
+    border-radius: 5px;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    
+    justify-content: center;
+}
+.google > img{
+    transform: translate(18px, 36px);
+}
+.bottom {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 101px;
+}
+.bottom > input{
+    margin-bottom: 20px;
+    width: 380px;
+    height: 40px;
+    font-style: normal;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    grid-gap: 15px;
+    margin-top: 22px;
+}
+.checkbox:last-child {
+    margin-top: 22px;
+}
+.bottom > label{
+    margin: 0 0 22px 15px;
+    
+}
+.bottom > button{
+    width: 380px;
+    height: 40px;
+    background: #68ACFD;
+    border-radius: 5px;
+    color: #FFFFFF;
+    margin: 30px 0;
+}
+span{
+    color: #68ACFD;
 }
