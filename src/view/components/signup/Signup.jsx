@@ -12,7 +12,7 @@ export function Signup() {
                     <img src="./img/location.png" alt="" />
                     <p>Learn about location.</p>
                     <img src="./img/house.png" alt="" />
-                    <P>Find out the value of your house free of charge.</P>
+                    <p>Find out the value of your house free of charge.</p>
                 </div>
                 <div className={css.box2}>
                     <img src="./img/quality.png" alt="" />
@@ -38,7 +38,7 @@ export function Signup() {
                     <button>SIGN UP</button>
                     <p>Already a member? <span>Login</span> now!</p>
                 </div>
-                <div></div>
+                
             </div>
         </div>
     )
