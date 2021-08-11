@@ -23,7 +23,6 @@ export const ForSale = () => {
         <Block2 />
         <Block2 />
         <Block2 />
-        <LearnMore/>
       </div>
       <Block3 />
       <Block4 />
