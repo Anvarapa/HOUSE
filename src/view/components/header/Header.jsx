@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export const Header = () => {
   return (
     <header className={css.header}>
-      <img src="./img/logo.svg" alt="" />
+      <a href="#"><img src="./img/logo.svg" alt="" /></a>
       <ul className={css.ul}>
         <li>
           <a href="#">For sale</a>
