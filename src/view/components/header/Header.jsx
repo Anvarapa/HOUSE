@@ -50,11 +50,6 @@ export const Header = () => {
         <li>
           <a href="#">Location</a>
         </li>
-        <li>
-          <NavLink exact to="/signin">
-            Sign in
-          </NavLink>
-        </li>
       </ul>
       <div className={css.button_log}>
         <button className={css.button} onClick={handleOpen}>
@@ -92,6 +87,7 @@ export const Header = () => {
                 <a className={css.login__a} href="#">
                   I forget my password
                 </a>
+
                 <Button
                   className={css.loginButton}
                   variant="contained"
@@ -108,6 +104,9 @@ export const Header = () => {
                 >
                   <p className={css.loginButton__p}>Connect with Google</p>
                 </Button>
+                <NavLink onClick={handleClose} className={css.signIn} exact to="/signin">
+                  Sign in
+                </NavLink>
               </div>
             </div>
           </Fade>

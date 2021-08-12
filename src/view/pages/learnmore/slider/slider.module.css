@@ -1,0 +1,69 @@
+.seller {
+  align-items: center;
+  margin-left: 112px;
+  width: 260px;
+  height: 301px;
+  background: #fff;
+  padding: 20px 72px;
+}
+
+.seler__img {
+  max-width: 115px;
+  width: 100%;
+  height: 115px;
+}
+
+.premium__img {
+  margin-left: 26px;
+  margin-top: -4px;
+}
+
+.fcs {
+  text-align: center;
+}
+
+.name {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  margin-top: 5px;
+}
+
+.special {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.5);
+  width: 154px;
+  margin-left: -18px;
+}
+
+.btn__phone {
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  color: #ffffff;
+  background: #31aa52;
+  border-radius: 5px;
+  padding: 12px 52px;
+  width: 180px;
+  margin-left: -30px;
+  border: none;
+  margin-top: 5px;
+}
+
+.btn__send {
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  color: #434faa;
+  background: #fff;
+  border-radius: 5px;
+  padding: 12px 40px;
+  width: 180px;
+  margin-left: -30px;
+  border: 2px solid #434faa;
+  margin-top: 5px;
+}

@@ -7,7 +7,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Route, Link } from 'react-router-dom';
-import LearnMore from '../../learnmor/LearnMore';
+import LearnMore from '../../learnmore/LearnMore';
 
 const useStyles = makeStyles({
     root: {
