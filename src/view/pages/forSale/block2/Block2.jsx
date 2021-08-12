@@ -42,7 +42,7 @@ export const Block2 = () => {
           <Button size="small" color="primary">
             Share
           </Button>
-          <Link exact to="/learnmore">123</Link>
+          <Link exact to="/learnmore">learn more</Link>
         </CardActions>
       </Card>
     )

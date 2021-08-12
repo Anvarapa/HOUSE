@@ -1,6 +1,10 @@
 
 import Slider from './slider/Slider'
 import css from './learnmore.module.css'
+import HomeInfo from './homeinfo/HomeInfo'
+import Explanation from './explanation/Explanation'
+import Interior from './interior/Interior'
+import Learnmoremap from './learnmoremap/Learnmoremap'
 
 
 
@@ -18,6 +22,10 @@ export function LearnMore () {
                 </div>
             </div>
         <Slider />
+        <HomeInfo />
+        <Explanation />
+        <Interior />
+        <Learnmoremap />
         </div>
     )
 }
