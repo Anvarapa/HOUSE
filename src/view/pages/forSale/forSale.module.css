@@ -95,8 +95,11 @@
   border-radius: 5px;
   color: #fff;
   border: none;
-  outline: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 /* BLOCK4 */
 .block4 {

@@ -35,9 +35,9 @@ export const Header = () => {
   };
   return (
     <header className={css.header}>
-      <a href="#">
+      <NavLink exact to="/">
         <img src="./img/logo.svg" alt="" />
-      </a>
+      </NavLink>
       <ul className={css.ul}>
         <li>
           <NavLink exact to="/">
@@ -45,7 +45,7 @@ export const Header = () => {
           </NavLink>
         </li>
         <li>
-          <a href="#">Information</a>
+          <a href="#">About us</a>
         </li>
         <li>
           <a href="#">Location</a>
@@ -53,7 +53,7 @@ export const Header = () => {
       </ul>
       <div className={css.button_log}>
         <button className={css.button} onClick={handleOpen}>
-          Вход{" "}
+          Log in
         </button>
         <img src="./img/man_logo.svg" alt="" />
         <Modal
@@ -104,7 +104,12 @@ export const Header = () => {
                 >
                   <p className={css.loginButton__p}>Connect with Google</p>
                 </Button>
-                <NavLink onClick={handleClose} className={css.signIn} exact to="/signin">
+                <NavLink
+                  onClick={handleClose}
+                  className={css.signIn}
+                  exact
+                  to="/signin"
+                >
                   Sign in
                 </NavLink>
               </div>

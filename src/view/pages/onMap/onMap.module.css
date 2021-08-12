@@ -1,0 +1,13 @@
+.mapCard {
+  display: flex;
+  height: calc(100vh - 60px - 60px);
+}
+.cards {
+  width: 25%;
+  height: 100%;
+  overflow: auto;
+}
+.map {
+  width: calc(100vw - 25%);
+  height: 100%;
+}
