@@ -6,6 +6,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Route, Link } from 'react-router-dom';
+import LearnMore from '../../learnmore/LearnMore';
 
 const useStyles = makeStyles({
     root: {
@@ -40,9 +42,7 @@ export const Block2 = () => {
           <Button size="small" color="primary">
             Share
           </Button>
-          <Button size="small" color="primary">
-            Learn More
-          </Button>
+          <Link exact to="/learnmore">123</Link>
         </CardActions>
       </Card>
     )
