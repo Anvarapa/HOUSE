@@ -65,3 +65,9 @@
   width: 380px;
   background-color: #434FAA !important;
 }
+.signIn{
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 21px;
+  color: #68acfd;
+}

@@ -1,3 +1,4 @@
+
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -16,8 +17,12 @@ const useStyles = makeStyles({
     media: {
       height: 140,
     },
+    learnMore:{
+      textDecoration:'none',
+      color:'#68ACFD',
+    }
   });
-export const Block2 = () => {
+export const Block2 = (props) => {
     const classes = useStyles();
     return (
         
@@ -25,16 +30,15 @@ export const Block2 = () => {
         <CardActionArea>
           <CardMedia
             className={classes.media}
-            image="https://avangardstyle.kg/wp-content/uploads/2021/02/Avangard-CITY-7.jpg"
+            image={props.image}
             title="Contemplative Reptile"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              Lizard
+              {props.name}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-              across all continents except Antarctica
+             {props.description}
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -42,7 +46,7 @@ export const Block2 = () => {
           <Button size="small" color="primary">
             Share
           </Button>
-          <Link exact to="/learnmore">learn more</Link>
+          <Link className={classes.learnMore} exact to="/learnmore">learn more</Link>
         </CardActions>
       </Card>
     )

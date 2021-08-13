@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ForSale } from "./view/pages/forSale/ForSale";
 import { LearnMore } from "./view/pages/learnmore/LearnMore";
 import { Signup } from "./view/components/signup/Signup";
+import { OnMap } from "./view/pages/onMap/OnMap";
 function App() {
   return (
     <Router>
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route exact path="/signin">
             <Signup/>
+          </Route>
+          <Route>
+            <OnMap exact path ="/onmap"/>
           </Route>
         </Switch>
       </div>
