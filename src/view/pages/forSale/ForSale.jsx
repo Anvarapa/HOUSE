@@ -16,14 +16,24 @@ export const ForSale = (props) => {
         setData(data);
       });
   }, []);
+
+    const [value, setValue] = useState('')
+
+
+    const filtered = data.filter(item => {
+        return item.name.toLowerCase().includes(value.toLowerCase())
+    })
+
   return (
     <div>
-      <Block1 />
+      <Block1 value={value}
+              setValue={setValue}
+      />
       <div className='container'>
       <h1 className={css.all_blocks_h1}>Featured Projects</h1>
       </div>
       <div className={`${css.block2} container`}>
-      {data.map((item) => (
+      {filtered.map((item) => (
             <Block2 key={item.id} {...item} />
           ))}
       </div>

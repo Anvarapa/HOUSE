@@ -7,6 +7,7 @@ import { Block2 } from "../forSale/block2/Block2";
 
 export const OnMap = () => {
   const [data, setData] = useState([]);
+  
   useEffect(() => {
     fetch("https://60f1203338ecdf0017b0fa4e.mockapi.io/teamHouse")
       .then((res) => res.json())
