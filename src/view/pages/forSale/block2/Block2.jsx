@@ -46,7 +46,7 @@ export const Block2 = (props) => {
           <Button size="small" color="primary">
             Share
           </Button>
-          <Link className={classes.learnMore} exact to="/learnmore">learn more</Link>
+          <Link className={classes.learnMore} exact to={`/learnmore/${props.id}`}>learn more</Link>
         </CardActions>
       </Card>
     )
