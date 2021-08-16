@@ -18,3 +18,19 @@
   width: calc(100vw - 25%);
   height: 100%;
 }
+
+
+
+/*cards in map*/
+.marker_button{
+  cursor: pointer;
+  border: none;
+background: none;
+  color: white;
+}
+.marker_button img {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+}

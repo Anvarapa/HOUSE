@@ -2,7 +2,7 @@ import React from "react";
 import css from "./onMap.module.css";
 import { useEffect, useState } from "react";
 import { Block2 } from "../forSale/block2/Block2";
-import ReactMapGL, {Marker} from 'react-map-gl';
+import ReactMapGL, {Marker, Popup} from 'react-map-gl';
 
 export const OnMap = () => {
   const [data, setData] = useState([]);
@@ -18,8 +18,10 @@ export const OnMap = () => {
     const [viewport, setViewport] = React.useState({
         latitude: 42.87681595201458,
         longitude: 74.58320174047928,
-        zoom: 8
+        zoom: 10,
     });
+
+    const [selectedMap, setSelectedMap] = useState(null)
   return (
     <div className="container">
       <div className={css.mapCard}>
@@ -42,21 +44,25 @@ export const OnMap = () => {
                 height="100%"
                 onViewportChange={(viewport) => setViewport(viewport)}
             >
-                {/*<Marker longitude={74.58320174047928} latitude={42.87681595201458}>*/}
-                {/*    <button>*/}
-                {/*                    <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/118A0/production/_118604817__116721094_mustang.jpg" width="100px" alt=""/>*/}
-                {/*                </button>*/}
-                {/*</Marker>*/}
-
-
                 {data.map((item) => (
                     <Marker longitude={Number(item.lng)} latitude={Number(item.ltd)} >
-                        <button>
-                            <img width="100px" src={item.image} alt=""/>
+                        {/*onClick={<Block2 key={item.id} image={item.image}*/}
+                        <button className={css.marker_button} onClick={(e)=>{
+                        e.preventDefault();
+                            setSelectedMap(Number(item))
+                        }
+                        }>
+                            <img src="./img/man_logo.svg" alt=""/>
                         </button>
                     </Marker>
                 ))}
-
+                {selectedMap? (
+                  <Popup latitude={selectedMap.item.lng} longitude={selectedMap.item.ltd}>
+                      <div>
+                          MAPPPPPPPPP
+                      </div>
+                  </Popup>
+                ) : null}
             </ReactMapGL>
             );
         </div>
