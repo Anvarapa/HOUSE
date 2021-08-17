@@ -1,0 +1,43 @@
+.about{
+    margin: 100px 0 50px 50px;
+    font-family: Roboto;
+}
+.about > h1{
+    color:blue;
+    font-weight: bold;
+    margin-top: 50px;
+    font-style: normal;
+    font-size: 70px;
+    line-height: 50px;
+    color: blue;
+}
+.about > p{
+    margin-top: 50px;
+}
+.object{
+    display: flex;
+}
+.object > img{
+    width: 100px;
+    height: 100px;
+    margin-top: 100px;
+    grid-gap:10px;
+}
+.object > p{
+    margin-top: 120px;
+}
+.my{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.my > p{
+    margin-top: 100px;
+}
+.my > img{
+    width: 200px;
+    grid-template: 200px;
+    margin-top: 50px;
+    grid-gap: 100px;
+
+}
