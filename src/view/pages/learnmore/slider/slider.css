@@ -1,0 +1,17 @@
+.control-dots{
+    display: none;
+}
+
+.thumbs-wrapper {
+    margin: 0!important ;
+} 
+
+.carousel-status {
+    display: none;
+}
+
+.slider {
+    margin-top: 20px;
+    display: flex;
+    
+}
