@@ -59,7 +59,7 @@ export function Signup() {
                     <label for="id">I allow Fasthome to contact me via e-mail, SMS, etc for marketing and promotional purposes.</label>
                     </div>
                     <button>SIGN UP</button>
-                    <p>Already a member? <span>Login</span> now!</p>
+                    <p>Already a member? <a className={css.signIn__a} href="#">log in</a> now!</p>
                 </form>
             </div>
         </div>

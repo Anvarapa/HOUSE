@@ -6,6 +6,8 @@ import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import React from "react";
 import Button from "@material-ui/core/Button";
+import { useHistory } from "react-router-dom";
+import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -33,11 +35,26 @@ export const Header = () => {
   const handleClose = () => {
     setOpen(false);
   };
+  /////
+  const [login, setLogin] = useState('');
+  const [password, setPassword] = useState('')
+  const history = useHistory();
+  const submit = (e) => {
+    e.preventDefault()
+    if (login === "admin" && password === ("12345")) {
+      localStorage.setItem("user", JSON.stringify({
+        login: login,
+        accessToken: "turdaliev"
+      }))
+      history.push("/dashboard")
+    }
+  }
+  ///////
   return (
     <header className={css.header}>
-      <a href="#">
+      <NavLink exact to="/">
         <img src="./img/logo.svg" alt="" />
-      </a>
+      </NavLink>
       <ul className={css.ul}>
         <li>
           <NavLink exact to="/">
@@ -46,18 +63,21 @@ export const Header = () => {
         </li>
         <li>
           <Link exact to="/information">
-            Information
-            </Link>
+            About us
+          </Link>
+
+        
+
         </li>
         <li>
           <Link exact to="/">
-          Language
+            Language
           </Link>
         </li>
       </ul>
       <div className={css.button_log}>
         <button className={css.button} onClick={handleOpen}>
-          Вход{" "}
+          Log in
         </button>
         <img src="./img/man_logo.svg" alt="" />
         <Modal
@@ -74,15 +94,19 @@ export const Header = () => {
         >
           <Fade in={open}>
             <div className={classes.paper}>
-              <div className={css.login}>
+              <form className={css.login} onSubmit={submit}>
                 <img src="./img/logo.svg" alt="" />
                 <input
+                  value={login}
+                  onChange={(e) => setLogin(e.target.value)}
                   className={css.input}
                   required
                   type="mail"
                   placeholder="Email"
                 />
                 <input
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   className={css.input}
                   required
                   type="password"
@@ -96,7 +120,9 @@ export const Header = () => {
                   className={css.loginButton}
                   variant="contained"
                   color="primary"
+                  type="submit"
                   disableElevation
+                  onClick={handleClose}
                 >
                   <p className={css.loginButton__p}>LOGIN</p>
                 </Button>
@@ -108,10 +134,15 @@ export const Header = () => {
                 >
                   <p className={css.loginButton__p}>Connect with Google</p>
                 </Button>
-                <NavLink onClick={handleClose} className={css.signIn} exact to="/signin">
+                <NavLink
+                  onClick={handleClose}
+                  className={css.signIn}
+                  exact
+                  to="/signin"
+                >
                   Sign in
                 </NavLink>
-              </div>
+              </form>
             </div>
           </Fade>
         </Modal>

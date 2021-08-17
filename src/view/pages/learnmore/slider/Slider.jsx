@@ -28,10 +28,10 @@ class Slider extends React.Component {
 
                 <div className={css.seller}>
                     <div className={css.seler__img}>
-                        <img src="./img/man.png" alt="" />
+                        <img src="/img/man.png" alt="" />
                     </div>
                     <div className={css.premium__img}>
-                        <img src="./img/premium.png" alt="" />
+                        <img src="/img/premium.png" alt="" />
                     </div>
                     <div className={css.fcs}>
                         <p className={css.name}>Micheal James</p>
