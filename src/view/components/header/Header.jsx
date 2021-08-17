@@ -1,5 +1,5 @@
 import css from "./header.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
@@ -45,10 +45,14 @@ export const Header = () => {
           </NavLink>
         </li>
         <li>
-          <a href="#">Information</a>
+          <Link exact to="/information">
+            Information
+            </Link>
         </li>
         <li>
-          <a href="#">Location</a>
+          <Link exact to="/">
+          Language
+          </Link>
         </li>
       </ul>
       <div className={css.button_log}>
