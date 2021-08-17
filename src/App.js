@@ -4,9 +4,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ForSale } from "./view/pages/forSale/ForSale";
 import LearnMore from "./view/pages/learnmore/LearnMore";
 import { Signup } from "./view/components/signup/Signup";
+
 import {Information} from "./view/pages/information/Information";
 import { OnMap } from "./view/pages/onMap/OnMap";
 import  {PrivatePoute} from "./view/router/PrivateRoute";
+
+
+
 
 function App() {
   return (
@@ -18,6 +22,7 @@ function App() {
           <Route exact path="/">
             <ForSale />
           </Route>
+
           <Route exact path="/learnmore/:id">
             <LearnMore />
           </Route>

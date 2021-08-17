@@ -20,6 +20,9 @@ code {
   width: 100%;
   margin: auto;
 }
-
+/*ON MAP Z INDEXS*/
+.mapboxgl-popup{
+  z-index: 5 !important;
+}
 
 

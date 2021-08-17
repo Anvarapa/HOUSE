@@ -64,6 +64,7 @@ export const OnMap = () => {
                   </Popup>
                 ) : null}
             </ReactMapGL>
+            );
         </div>
       </div>
     </div>

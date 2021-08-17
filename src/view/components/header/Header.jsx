@@ -6,8 +6,8 @@ import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import React from "react";
 import Button from "@material-ui/core/Button";
-import { useHistory } from "react-router-dom";
-import { useState } from "react";
+import {useHistory} from "react-router-dom";
+import  {useState} from "react";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -35,15 +35,15 @@ export const Header = () => {
   const handleClose = () => {
     setOpen(false);
   };
-  /////
+/////
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('')
   const history = useHistory();
-  const submit = (e) => {
+  const submit = (e)=>{
     e.preventDefault()
-    if (login === "admin" && password === ("12345")) {
+    if(login === "admin" && password === ("12345")){
       localStorage.setItem("user", JSON.stringify({
-        login: login,
+        login:login,
         accessToken: "turdaliev"
       }))
       history.push("/dashboard")
@@ -62,16 +62,16 @@ export const Header = () => {
           </NavLink>
         </li>
         <li>
-          <Link exact to="/information">
-            About us
-          </Link>
 
-        
+          <Link exact to="/information">
+            Information
+            </Link>
+          <a href="#">About us</a>
 
         </li>
         <li>
           <Link exact to="/">
-            Language
+          Language
           </Link>
         </li>
       </ul>
@@ -97,16 +97,16 @@ export const Header = () => {
               <form className={css.login} onSubmit={submit}>
                 <img src="./img/logo.svg" alt="" />
                 <input
-                  value={login}
-                  onChange={(e) => setLogin(e.target.value)}
+                    value={login}
+                    onChange={(e)=>setLogin(e.target.value)}
                   className={css.input}
                   required
                   type="mail"
                   placeholder="Email"
                 />
                 <input
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                    value={password}
+                    onChange={(e)=>setPassword(e.target.value)}
                   className={css.input}
                   required
                   type="password"
