@@ -8,6 +8,7 @@ import React from "react";
 import Button from "@material-ui/core/Button";
 import {useHistory} from "react-router-dom";
 import  {useState} from "react";
+import {ModalWindow} from "./ModalWindow";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const Header = () => {
+export const Header = (props) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -35,6 +36,17 @@ export const Header = () => {
   const handleClose = () => {
     setOpen(false);
   };
+  //// MAKE SURE
+  const allclasses = useStyles();
+  const [show, setShow] = React.useState(false);
+
+  const handleShow = () => {
+    setShow(true);
+  };
+
+  const handleNotShow = () => {
+    setShow(false);
+  };
 /////
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('')
@@ -42,10 +54,8 @@ export const Header = () => {
   const submit = (e)=>{
     e.preventDefault()
     if(login === "admin" && password === ("12345")){
-      localStorage.setItem("user", JSON.stringify({
-        login:login,
-        accessToken: "turdaliev"
-      }))
+     props.addUser({login, accesTokin:"turdaliev"})
+
       history.push("/dashboard")
     }
   }
@@ -69,10 +79,48 @@ export const Header = () => {
         </li>
       </ul>
       <div className={css.button_log}>
-        <button className={css.button} onClick={handleOpen}>
-          Log in
-        </button>
+
+        {
+          props.user === null ?  <button className={css.button} onClick={handleOpen}>
+            Log in
+          </button>: <button className={css.button} onClick={handleShow}>
+            Log out
+            </button>
+        }
+
+          {/*<button className={css.button} onClick={()=> props.addUser(null)>*/}
         <img src="./img/man_logo.svg" alt="" />
+
+        {/*SHOW*/}
+        <Modal
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            className={classes.modal}
+            open={show}
+            onClose={handleNotShow}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+              timeout: 500,
+            }}
+        >
+          <Fade in={show}>
+            <div className={classes.paper}>
+           <h1 className={css.show__h1}>ВЫ УВЕРЕНЫ ЧТО ХОТИТЕ ВЫЙТИ?</h1>
+              <div className={css.btn_show}>
+                <button className={css.show_cl_op} onClick={()=> {
+                  props.addUser(null)
+                  handleNotShow()
+                }} >YES</button>
+                <button onClick={handleNotShow} className={css.show_cl_op}>NO</button>
+              </div>
+
+            </div>
+          </Fade>
+        </Modal>
+
+
+        {/*//LOGIN*/}
         <Modal
           aria-labelledby="transition-modal-title"
           aria-describedby="transition-modal-description"
@@ -84,7 +132,7 @@ export const Header = () => {
           BackdropProps={{
             timeout: 500,
           }}
-        >
+         >
           <Fade in={open}>
             <div className={classes.paper}>
               <form className={css.login} onSubmit={submit}>

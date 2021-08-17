@@ -6,16 +6,24 @@ import LearnMore from "./view/pages/learnmore/LearnMore";
 import { Signup } from "./view/components/signup/Signup";
 import { OnMap } from "./view/pages/onMap/OnMap";
 import  {PrivatePoute} from "./view/router/PrivateRoute";
+import {useState} from "react";
+import {PublickRoute} from "./view/router/PublickRoute";
 
 
 
 function App() {
+  const [user, setUser] = useState(()=>JSON.parse(localStorage.getItem("user")))
+  const addUser = (obj)=>{
+    console.log(obj)
+    setUser(obj)
+    localStorage.setItem("user", JSON.stringify(obj))
+  }
   return (
     <Router>
       <div className="App">
-        <Header />
+        <Header addUser={addUser} user={user}/>
         <Switch>
-          <PrivatePoute path="/dashboard" Component={() =><div>Dashboard</div>}/>
+          <PrivatePoute user= {user} path="/dashboard" Component={() =><div>Dashboard</div>}/>
           <Route exact path="/">
             <ForSale />
           </Route>
@@ -23,9 +31,11 @@ function App() {
           <Route exact path="/learnmore/:id">
             <LearnMore />
           </Route>
-          <Route exact path="/signin">
-            <Signup/>
-          </Route>
+
+          <PublickRoute user= {user} path="/signin" Component={Signup}/>
+          {/*<Route exact path="/signin">*/}
+          {/*  </>*/}
+          {/*</Route>*/}
           <Route>
             <OnMap exact path ="/onmap"/>
           </Route>
