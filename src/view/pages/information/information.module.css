@@ -1,14 +1,16 @@
 .container_slider{
-    width: 500px;
+    width: 1000px;
     margin: 0 auto;
 }
-.slider {
+.sliderDiv {
     margin-top: 30px;
-    max-width: 700px;
     width: 100%;
     height: 500px;
 }
-
+.sliderImg {
+    width: 100%;
+    height: 100%;
+}
 .arrowNext {
     width: 60px;
     height: 60px;
@@ -60,18 +62,18 @@
 }
 .my{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 50px;
 }
 .my > p{
     margin-top: 100px;
+    color: blue;
+    font-size: bold;
 }
 .my > img{
     width: 200px;
     grid-template: 200px;
     margin-top: 50px;
-    grid-gap: 100px;
-
 }
 .laboratory{
     display: flex;
@@ -84,5 +86,5 @@
     grid-gap:10px;
 }
 .laboratory > p{
-    margin-top: 100px;
+    margin-top: 80px;
 }

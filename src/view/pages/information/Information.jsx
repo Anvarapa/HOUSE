@@ -28,7 +28,7 @@ function SamplePrevArrow(props) {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 100,
+        speed: 900,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -39,17 +39,17 @@ function SamplePrevArrow(props) {
       return (
         <div>
           <Slider {...settings} className={css.container_slider}>
-              <div>
-                  <img className={css.slider} src="./img/1dom.png" alt="" />
+              <div className={css.sliderDiv}>
+                  <img className={css.sliderImg} src="./img/1dom.png" alt="" />
               </div>
-              <div className={css.slider}>
-                  <img className={css.slider} src="./img/2dom.png" alt="" />
+              <div className={css.sliderDiv}>
+                  <img className={css.sliderImg} src="./img/2dom.png" alt="" />
               </div>
-              <div className={css.slider}>
-                  <img className={css.slider} src="./img/3dom.png" alt="" />
+              <div className={css.sliderDiv}>
+                  <img className={css.sliderImg} src="./img/3dom.png" alt="" />
               </div>
-                  <div className={css.slider}>
-                      <img className={css.slider} src="./img/4dom.png" alt="" />
+                  <div className={css.sliderDiv}>
+                      <img className={css.sliderImg} src="./img/4dom.png" alt="" />
                   </div>
           </Slider>
         <div className={css.about}>
