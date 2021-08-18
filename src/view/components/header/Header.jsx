@@ -1,5 +1,5 @@
 import css from "./header.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
@@ -71,9 +71,9 @@ export const Header = (props) => {
               For sale
             </NavLink>
           </li>
-          <li>
-            <a href="#">About us</a>
-          </li>
+          <Link exact to="/information">
+            Information
+            </Link>
           <li>
             <a href="#">Location</a>
           </li>
