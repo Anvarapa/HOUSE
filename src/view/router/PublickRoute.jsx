@@ -1,4 +1,3 @@
-
 import {Route, Redirect} from "react-router-dom";
 export const PublickRoute = ({Component, path, user})=>{
     // const user =JSON.parse( localStorage.getItem("user"))
