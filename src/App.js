@@ -15,6 +15,14 @@ import { Information } from "./view/pages/information/Information";
 
 
 function App() {
+<<<<<<< HEAD
+=======
+  const [user, setUser] = useState(()=>JSON.parse(localStorage.getItem("user")))
+  const addUser = (obj)=>{
+    setUser(obj)
+    localStorage.setItem("user", JSON.stringify(obj))
+  }
+>>>>>>> 1770673f2687c090bc012b397c5217b30f3b5482
   return (
       <Router>
         <div className="App forsale__relative">
