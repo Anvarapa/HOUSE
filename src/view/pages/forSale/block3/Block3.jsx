@@ -1,5 +1,5 @@
 import css from "./../forSale.module.css";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 export const Block3 = () => {
   return (
     <div className="container">
@@ -10,9 +10,9 @@ export const Block3 = () => {
             Find the house you are looking for easily according to location
             information.
           </p>
-          <NavLink  className={css.left_button} exact to="/onmap">
+          <Link  className={css.left_button} exact to="/onmap">
             ON MAP
-          </NavLink>
+          </Link>
         </div>
         <img src="./img/block3_right.jpg" alt="" />
       </div>
