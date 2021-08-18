@@ -22,6 +22,7 @@ export const Learnmoremap = () => {
         zoom: 8
     });
     return (
+        
         <div className="container">
             <div className={css.mapCard}>
                 <div className={css.map}>
@@ -32,7 +33,9 @@ export const Learnmoremap = () => {
                         width="100%"
                         height="100%"
                         onViewportChange={(viewport) => setViewport(viewport)}>
-
+                            <div>
+                                123456
+                            </div>
                     </ReactMapGL>
                 </div>
             </div>
