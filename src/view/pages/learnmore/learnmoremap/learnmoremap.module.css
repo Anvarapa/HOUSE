@@ -1,20 +1,15 @@
 .mapCard {
-    display: flex;
-    height: calc(100vh - 60px - 60px);
+    width: 900px;
+    height: 439px;
+    background: #fff;
+    padding: 20px 20px;
+
 }
-.buttons{
-    display: flex;
-    justify-content: space-between;
-}
-.btn{
-    width: 50px;
-}
-.cards {
-    width: 25%;
-    height: 100%;
-    overflow: auto;
-}
-.map {
-    width: calc(100vw - 25%);
-    height: 100%;
+
+.title__location {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    margin-bottom: 20px;
 }

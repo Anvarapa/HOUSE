@@ -5,7 +5,9 @@ import Slider from './slider/Slider'
 import HomeInfo from './homeinfo/HomeInfo'
 import Explanation from './explanation/Explanation'
 import Interior from './interior/Interior'
-import {Learnmoremap} from "./learnmoremap/Learnmoremap";
+import {LearnMoreMap} from "./learnmoremap/LearnMoreMap";
+
+
 
 
 function LearnMore () {
@@ -26,7 +28,7 @@ function LearnMore () {
         <div className={css.block}>
           <div className={css.map__info}>
             <img src="/img/Mapicon.png" alt="" />
-            <p className={css.london}>London, Dean St.</p>
+            <p className={css.london}>{data.city}</p>
           </div>
           <p className={css.price}>{data.price}$</p>
         </div>
@@ -35,7 +37,7 @@ function LearnMore () {
         <HomeInfo />
         <Explanation />
         <Interior />
-        <Learnmoremap />
+        <LearnMoreMap />
     </div>
     )
 }
