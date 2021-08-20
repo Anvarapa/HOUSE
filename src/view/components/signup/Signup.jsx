@@ -1,13 +1,13 @@
 import css from './Signup.module.css'
-
+import { NavLink, Link } from "react-router-dom";
 
 
 export function Signup() {
     return (
         <div className={css.grey}>
-            <div className={css.x}>
-                <img src="./img/x.png" alt="" />
-            </div>
+            <NavLink className={css.x} exact to="/">
+            <img src="./img/x.png" alt="" />
+        </NavLink>
         <div className={css.signup}>
             <div className={css.signup_left}>
                 <div className={css.logo}>
