@@ -16,7 +16,6 @@ import { Information } from "./view/pages/information/Information";
 function App() {
   const [user, setUser] = useState(()=>JSON.parse(localStorage.getItem("user")))
   const addUser = (obj)=>{
-    console.log(obj)
     setUser(obj)
     localStorage.setItem("user", JSON.stringify(obj))
   }
