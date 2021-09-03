@@ -1,3 +1,4 @@
+
 import React from "react";
 import css from "./onMap.module.css";
 import {useEffect, useState} from "react";
@@ -6,6 +7,7 @@ import ReactMapGL, {Marker, Popup} from 'react-map-gl';
 
 export const OnMap = () => {
     const [data, setData] = useState([]);
+    const [selectedMap, setSelectedMap] = useState({})
 
     useEffect(() => {
         fetch("https://60f1203338ecdf0017b0fa4e.mockapi.io/teamHouse")
@@ -21,7 +23,7 @@ export const OnMap = () => {
         zoom: 10,
     });
 
-    const [selectedMap, setSelectedMap] = useState(null)
+
     return (
         <div className="container">
             <div className={css.mapCard}>
@@ -61,12 +63,17 @@ export const OnMap = () => {
                                 {selectedMap===item?
 
 
-                                    <Popup latitude={Number(selectedMap.ltd)} longitude={Number(selectedMap.lng)}>
-                                        <div>
+                                    <Popup
+                                        anchor="bottom"
+                                        latitude={Number(selectedMap.ltd)} longitude={Number(selectedMap.lng)}
+                                        closeButton
+                                        closeOnClick={false}
+                                        onClose={() => setSelectedMap({})}
+                                    >
                                             <Block2 key={item.id} {...item} />
-                                        </div>
+
                                     </Popup>
-                                : false}
+                                    : false}
                             </div>
                         ))}
 
