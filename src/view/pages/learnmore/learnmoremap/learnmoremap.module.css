@@ -1,0 +1,15 @@
+.mapCard {
+    width: 900px;
+    height: 439px;
+    background: #fff;
+    padding: 20px 20px;
+
+}
+
+.title__location {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    margin-bottom: 20px;
+}

@@ -1,11 +1,11 @@
 
 import React from "react";
-import css from "./onMap.module.css";
+import css from "./learnmoremap.module.css";
 import {useEffect, useState} from "react";
 
 import ReactMapGL, {Marker, Popup} from 'react-map-gl';
 
-export const OnMap = () => {
+export const LearnMoreMap = () => {
     const [data, setData] = useState([]);
     const [selectedMap, setSelectedMap] = useState({})
 
@@ -40,8 +40,8 @@ export const OnMap = () => {
                         {...viewport}
                         mapStyle="mapbox://styles/anvar1997/cksebp8mj8s4x17peh5cpg4pf"
                         mapboxApiAccessToken={"pk.eyJ1IjoiYW52YXIxOTk3IiwiYSI6ImNrc2VibnF3ZjBmYzMydW9mOGN5ZWt2NTUifQ.z8-kPZ7kriE7c1DXXn8paQ"}
-                        width="100%"
-                        height="100%"
+                        width="860px"
+                        height="358px"
                         onViewportChange={(viewport) => setViewport(viewport)}
                     >
                         {data.map((item) => (
@@ -66,6 +66,3 @@ export const OnMap = () => {
         </div>
     );
 };
-
-
-
