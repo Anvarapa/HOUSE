@@ -1,9 +1,57 @@
-import React from 'react'
-import css from './information.module.css'
+import React, { Component } from "react";
+import css from './information.module.css';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
-
-export const Information=()=>{
+function SampleNextArrow(props) {
+    const { onClick } = props;
     return (
+        <img 
+        src="/img/arrow.png"
+        className={css.arrowNext}
+        onClick={onClick}
+        />
+    )
+}
+function SamplePrevArrow(props) {
+    const { onClick } = props;
+    return (
+        <img 
+        src="/img/arrow.png"
+        className={css.arrowPrev}
+        onClick={onClick}
+        />
+    )
+}
+  export const Information=()=>{
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 900,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />
+
+      }
+      return (
+        <div>
+          <Slider {...settings} className={css.container_slider}>
+              <div className={css.sliderDiv}>
+                  <img className={css.sliderImg} src="./img/1dom.png" alt="" />
+              </div>
+              <div className={css.sliderDiv}>
+                  <img className={css.sliderImg} src="./img/2dom.png" alt="" />
+              </div>
+              <div className={css.sliderDiv}>
+                  <img className={css.sliderImg} src="./img/3dom.png" alt="" />
+              </div>
+                  <div className={css.sliderDiv}>
+                      <img className={css.sliderImg} src="./img/4dom.png" alt="" />
+                  </div>
+          </Slider>
         <div className={css.about}>
             <h1>About us</h1>
             <p>“FastHome” is a leader in the construction market. 
@@ -18,7 +66,7 @@ export const Information=()=>{
                 <p>CULTURAL AND SOCIAL FACILITIES – 15 OBJECTS</p>
             </div>
             <h1>Proffesional specialist</h1>
-            
+
             <p>Specialists from Russia, Kazakhstan, Turkey, Korea, Japan, and other countries work with us.
 
             The number of employees of the “Avangard-Style” company consists of qualified specialists, engineers, and workers of various specialties. Engaged in the construction of buildings and structures of various categories of complexity, they have gained invaluable experience, which allows our company to build new objects in a short time, without forgetting about the quality and reliability.</p>
@@ -40,6 +88,7 @@ export const Information=()=>{
                 <img src="./img/galochka.png" alt="" />
                 <p>PLUMBING, WINDOWS, DOORS, ETC.</p>
             </div>
+        </div>
         </div>
     )
 }

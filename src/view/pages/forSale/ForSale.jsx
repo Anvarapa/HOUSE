@@ -6,6 +6,7 @@ import { Block3 } from "./block3/Block3";
 import { Block4 } from "./block4/Block4";
 import { Block5 } from "./block5/Block5";
 import { Footer } from "./footer/Footer";
+import { NavLink, Link } from "react-router-dom";
 
 export const ForSale = (props) => {
   const [data, setData] = useState([]);
@@ -17,30 +18,34 @@ export const ForSale = (props) => {
       });
   }, []);
 
-    const [value, setValue] = useState('')
+  const [value, setValue] = useState('')
 
 
-    const filtered = data.filter(item => {
-        return item.name.toLowerCase().includes(value.toLowerCase())
-    })
+  const filtered = data.filter(item => {
+    return item.name.toLowerCase().includes(value.toLowerCase())
+  })
 
   return (
-    <div>
+    <div className={css.forsale__relative}>
       <Block1 value={value}
-              setValue={setValue}
+        setValue={setValue}
       />
       <div className='container'>
-      <h1 className={css.all_blocks_h1}>Featured Projects</h1>
+        <h1 className={css.all_blocks_h1}>Featured Projects</h1>
       </div>
       <div className={`${css.block2} container`}>
-      {filtered.map((item) => (
-            <Block2 key={item.id} {...item} />
-          ))}
+        {filtered.map((item) => (
+          <Block2 key={item.id} {...item} />
+        ))}
+
+      
       </div>
+     
       <Block3 />
       <Block4 />
       <Block5 />
-      <Footer/>
+      <Footer />
+
     </div>
   );
 };
